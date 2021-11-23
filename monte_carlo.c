@@ -7,7 +7,7 @@
 
 void main()
 {
-	int t = 0, n;
+	int t, n;
 	for (t = 1; t <= 8; t *= 2)
 	{
 		for (n = 500; n <= 2000; n += 500)
