@@ -25,7 +25,7 @@ void main()
 				x = (double)rand() / RAND_MAX;
 				y = (double)rand() / RAND_MAX;
 				z_sqr = x * x + y * y;
-				if (sqrt(z_sqr) <= 1)
+				if (sqrt(z_sqr) <= 1)		//If the point lies inside the circle
 					count++;
 			}		
 			pi = ((double)count / n) * 4;
