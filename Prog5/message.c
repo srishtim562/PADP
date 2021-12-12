@@ -8,7 +8,7 @@ char m[5][20]={"\nHello","\nRVCE","\nCSE","\n7th Sem","\nHPC"};
 
 int main(int argc, char **argv)
 {
-	char mess[32];
+	char mess[BUFSIZE];
 	int root = 1, tag = 0;
 	int myRank, numProcs, temp = 0;
 	MPI_Init(&argc, &argv);
