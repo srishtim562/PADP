@@ -2,6 +2,7 @@
 #include <omp.h>
 #include <string.h>
 #include <ctype.h>
+
 #define COUNT 7
 #define FILE_NAME "words.txt"
 
