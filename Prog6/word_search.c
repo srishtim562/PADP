@@ -68,7 +68,8 @@ int main()
 			counts[i] = 0; 
 	
 		double t = omp_get_wtime();
-		#pragma omp parallel for shared(counts, search_words) private(i) num_threads(nt)
+		omp_set_num_threads(nt);
+		#pragma omp parallel for shared(counts, search_words) private(i)
 		for(i = 0; i < COUNT; i++) 
 			counts[i] = determine_count(FILE_NAME, search_words[i], ignore_case);
 
