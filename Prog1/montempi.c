@@ -2,6 +2,7 @@
 #include <mpi.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 int main(int argc, char **argv)
 {
@@ -20,7 +21,7 @@ int main(int argc, char **argv)
 			x = (double)rand() / RAND_MAX;
 			y = (double)rand() / RAND_MAX;
 			z = x * x + y * y;
-			if (z <= 1)
+			if (sqrt(z) <= 1)
 				count++;
 		}	
 	}	
