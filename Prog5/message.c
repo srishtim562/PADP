@@ -16,14 +16,14 @@ int main(int argc, char **argv)
 	MPI_Comm_rank(MPI_COMM_WORLD, &myRank);
 	MPI_Comm_size(MPI_COMM_WORLD, &numProcs);
 	
-	if(myRank != 0)
+	if (myRank != 0)
 	{
 		strcpy(mess, m[myRank-1]);
 		MPI_Send(&mess, BUFSIZE, MPI_CHAR, temp, tag, MPI_COMM_WORLD);
 	}
 	else
 	{
-		for(root = 1; root < numProcs; root++)
+		for (root = 1; root < numProcs; root++)
 		{
 			MPI_Recv(&mess, BUFSIZE, MPI_CHAR, root, tag, MPI_COMM_WORLD, &status);
 			printf("%s is message process of rank %d sent to process of rank %d\n", mess, myRank, root);
