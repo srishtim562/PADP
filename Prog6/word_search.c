@@ -8,7 +8,6 @@
 
 char search_words[COUNT][20] = {"The", "lorem", "ipsum", "present", "dolor", "sit", "in"};
 long counts[COUNT];
-int line_c = 0;
 
 int is_equal(char* a, const char* key, int ignore_case) 
 {
