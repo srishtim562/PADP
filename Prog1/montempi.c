@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main(int argc, char**argv)
+int main(int argc, char **argv)
 {
 	int iter = 1000000;
 	int i, reduced_count, reduced_iter, count = 0, rank;
