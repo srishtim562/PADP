@@ -47,7 +47,6 @@ void read_word(char *temp, FILE *fp)
 
 long determine_count(const char *file_name, const char *key, int ignore_case) 
 {
-	int key_index = 0, key_len = strlen(key);
 	long word_count = 0;
 	FILE *fp = fopen(file_name, "r");
 	char temp[40];
