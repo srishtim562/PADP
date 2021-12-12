@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <mpi.h>
 #include <stdlib.h>
-#define SEED 3655942
+#include <time.h>
+
 int main(int argc,char **argv)
 {
 	int iter=1000000;
@@ -13,7 +14,7 @@ int main(int argc,char **argv)
 		t=MPI_Wtime();
 	if(rank>0)
 	{
-		srand(SEED);
+		srand(time(0));
 		for(i=0;i<iter;i++)
 		{
 			x=(double)rand()/RAND_MAX;
@@ -35,18 +36,3 @@ int main(int argc,char **argv)
 	MPI_Finalize();
 	return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
