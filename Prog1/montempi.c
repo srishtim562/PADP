@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 				count++;
 		}	
 	}	
-	MPI_Reduce(&count, &reduced_count ,1 ,MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
+	MPI_Reduce(&count, &reduced_count, 1 ,MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
 	MPI_Reduce(&iter, &reduced_iter, 1, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
 	reduced_iter -= iter;
 	if (rank == 0)
