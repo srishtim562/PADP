@@ -65,6 +65,3 @@ int main(int argc, char **argv)
 	printf("Time taken = %g\n", t);
 	return 0;
 }
-			
-			
-		
